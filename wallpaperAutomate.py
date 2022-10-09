@@ -9,6 +9,7 @@ import pprint
 from urllib import response
 import requests
 import wget
+import ctypes
 
 def getwallpaper():
     os.environ['UNSPLASH_ACCESS_KEY'] = 'OkTe6NDCvHrJkZe0FREv2Eu4cha4EgiPwrxfJ8zgGI0'
@@ -27,9 +28,11 @@ def getwallpaper():
     print(wallpaper)
     # print(response.status_code)
     # print(response.json())
-    
+    return wallpaper
+
 def main():
-    
+    wallpaper = getwallpaper()
+    ctypes.windll.user32.SystemParametersInfoW(20, 0, wallpaper , 0)
 
 if __name__ == '__main__':
     main()
