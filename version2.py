@@ -12,7 +12,6 @@ import random
 def getwallpaper_random():
     os.environ['UNSPLASH_ACCESS_KEY'] = 'OkTe6NDCvHrJkZe0FREv2Eu4cha4EgiPwrxfJ8zgGI0'
     access_key = os.environ.get('UNSPLASH_ACCESS_KEY','v2YJIghQEUAlrvlxff_7PyGo9XEyOyNlL4adPszmWrU')
-    access_key = os.environ.get('UNSPLASH_ACCESS_KEY','non')
     url = "https://api.unsplash.com/photos/random/?client_id="+access_key
     params = {
         "query" : "HD wallpaper",
