@@ -4,12 +4,14 @@
  3. set the wallpaper
  4. Automate the calls to this script
 """
+from logging import exception
 import os
 import pprint
 from urllib import response
 import requests
 import wget
 import ctypes
+import time
 
 def getwallpaper():
     os.environ['UNSPLASH_ACCESS_KEY'] = 'OkTe6NDCvHrJkZe0FREv2Eu4cha4EgiPwrxfJ8zgGI0'
@@ -30,9 +32,21 @@ def getwallpaper():
     # print(response.json())
     return wallpaper
 
-def main():
+def setwallpaper():
     wallpaper = getwallpaper()
     ctypes.windll.user32.SystemParametersInfoW(20, 0, wallpaper , 0)
+
+def main():
+    try:
+        while True:
+            setwallpaper()
+            time.sleep(2)
+            print("Set the wallpaper...👍👍")
+    except KeyboardInterrupt:
+        "Hope you like this wallpaper! Quitting"
+    except Exception:
+        pass
+
 
 if __name__ == '__main__':
     main()
