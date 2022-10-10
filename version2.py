@@ -10,8 +10,7 @@ import random
 
 #getting the random wallpaper from unsplash api
 def getwallpaper_random():
-    os.environ['UNSPLASH_ACCESS_KEY'] = 'OkTe6NDCvHrJkZe0FREv2Eu4cha4EgiPwrxfJ8zgGI0'
-    access_key = os.environ.get('UNSPLASH_ACCESS_KEY','v2YJIghQEUAlrvlxff_7PyGo9XEyOyNlL4adPszmWrU')
+    access_key = os.environ.get('UNSPLASH_ACCESS_KEY1','UNSPLASH_ACCESS_KEY2')
     url = "https://api.unsplash.com/photos/random/?client_id="+access_key
     params = {
         "query" : "HD wallpaper",
@@ -41,9 +40,8 @@ def main1():
 
 #getting the specific wallpaper from unsplash api
 def getwallpaper_with_query(query):
-    os.environ['UNSPLASH_ACCESS_KEY'] = 'v2YJIghQEUAlrvlxff_7PyGo9XEyOyNlL4adPszmWrU'
     # pprint.pprint(dict(os.environ),width=1)
-    access_key = os.environ.get('UNSPLASH_ACCESS_KEY', 'OkTe6NDCvHrJkZe0FREv2Eu4cha4EgiPwrxfJ8zgGI0')
+    access_key = os.environ.get('UNSPLASH_ACCESS_KEY2', 'UNSPLASH_ACCESS_KEY1')
     url = "https://api.unsplash.com/search/photos?query="+query+"&client_id="+access_key
     params = {
         "query": "HD wallpaper",
