@@ -8,7 +8,7 @@ import ctypes
 import time
 import random
 
-#getting the random wallpaper from unsplash api
+#getting the random wallpaper from unsplash api's
 def getwallpaper_random():
     access_key = os.environ.get('UNSPLASH_ACCESS_KEY1','UNSPLASH_ACCESS_KEY2')
     url = "https://api.unsplash.com/photos/random/?client_id="+access_key
