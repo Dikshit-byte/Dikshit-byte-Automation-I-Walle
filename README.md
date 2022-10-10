@@ -11,4 +11,4 @@ HOPE YOU WILL ENJOY IT!!🔥🔥
 [NOTE] : This code will work for only windows based system. To run this code on mac or linux please search the applescript or any related script and replace it with my "ctypes.windll.user32.SystemParametersInfoW(20, 0, wallpaper, 0)"
 
 
-                                                                                                                                                      ~Dikshit singh
+                                                                                                  ~Dikshit singh
