@@ -1,4 +1,4 @@
-# Walle 
+# Walle 🤖🤖
 Follow this step to run : 
 1. Clone this repo into your local computer.
 2. Here i use OS library to get my access key from environment variable, so in order to use by your end go to unsplash api and create a project then get your access key.
