@@ -14,6 +14,9 @@ import ctypes
 import time
 import random
 
+"""
+Get specific wallpaper of your favourite choice 
+"""
 def getwallpaper_with_query(query):
     # pprint.pprint(dict(os.environ),width=1)
     access_key = os.environ.get('UNSPLASH_ACCESS_KEY2', 'non')
@@ -49,7 +52,9 @@ def main1(query):
     except Exception:
         pass
 
-
+"""
+    for random wallpaper without any query
+"""
 def getwallpaper_random():
     access_key = os.environ.get('UNSPLASH_ACCESS_KEY1','non')
     url = "https://api.unsplash.com/photos/random/?client_id="+access_key

@@ -41,13 +41,13 @@ def main1():
 #getting the specific wallpaper from unsplash api
 def getwallpaper_with_query(query):
     # pprint.pprint(dict(os.environ),width=1)
+    number = random.randint(0,10)
     access_key = os.environ.get('UNSPLASH_ACCESS_KEY2', 'UNSPLASH_ACCESS_KEY1')
-    url = "https://api.unsplash.com/search/photos?query="+query+"&client_id="+access_key
+    url = "https://api.unsplash.com/search/photos?page=1&query="+query+"&client_id="+access_key
     params = {
         "query": "HD wallpaper",
         "orientation": "landscape"
     }
-    number = random.randint(0,10)
     response = requests.get(url,params).json()
     image_url = response['results'][number]['urls']['full']
     wallpaper = wget.download(
